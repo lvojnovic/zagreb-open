@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+  {% for comp in competitions %}
+    <h2>{{comp.competition}}</h2>
+    {% for s in comp.items %}
+       <h3>{{s.sex}}</h3>
+       {% for cat in s.items %}
+         <h4>{{cat.category}}</h4>
+         {% for p in cat.items %}
+           <p>{{p.name}} {{p.surname}} {{p.club}} {{p.country}} {{p.kettlebell}} {{p.bodyweight}}</p>
+         {% endfor %}
+       {% endfor %}
+    {% endfor %}
+  {% endfor %}
+{% endblock %}

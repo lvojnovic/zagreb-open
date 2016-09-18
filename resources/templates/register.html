@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{% block content %}
+    <form method="POST" action="/register-submit">
+      <div class="form-group">
+        {% csrf-field %}
+        <p>
+          Select a competition:
+          <select class="form-control" name="competition" required>
+            <option>Bjelovar Open</option>
+            <option>Prvenstvo Hrvatske</option>
+          </select>
+        </p>
+        {% csrf-field %}
+        <p>
+          Name:
+          <input class="form-control"
+                 type="text"
+                 name="name"
+                 value="{{name}}" 
+                 required/>
+            </p>
+        {% if errors.name %}
+        <div class="alert alert-danger">{{errors.name|join}}</div>
+        {% endif %}
+        {% csrf-field %}
+        <p>
+          Surname:
+          <input class="form-control"
+                 type="text"
+                 name="surname"
+                 value="{{surname}}"
+                 required />
+            </p>
+        {% if errors.surname %}
+        <div class="alert alert-danger">{{errors.surname|join}}</div>
+        {% endif %}
+        {% csrf-field %}
+        <p>
+          Sex:
+          <select class="form-control" name="sex" required>
+            <option>Male</option>
+            <option>Female</option>
+          </select>
+        </p>
+        {% csrf-field %}
+        <p>
+          Club:
+          <input class="form-control"
+                 type="text"
+                 name="club"
+                 value="{{club}}" 
+                 required />
+            </p>
+        {% if errors.club %}
+        <div class="alert alert-danger">{{errors.club|join}}</div>
+        {% endif %}
+        {% csrf-field %}
+        <p>
+          Country:
+          <input class="form-control"
+                 type="text"
+                 name="country"
+                 value="{{country}}" 
+                 required/>
+            </p>
+        {% if errors.country %}
+        <div class="alert alert-danger">{{errors.country|join}}</div>
+        {% endif %}
+        {% csrf-field %}
+        <p>
+          Category:
+          <select class="form-control" name="category" required>
+            <option>Biathlon</option>
+            <option>Long Cycle</option>
+            <option>Snatch</option>
+          </select>
+        </p>
+        {% csrf-field %}
+        <p>
+          Kettlebell:
+          <select class="form-control" name="kettlebell" required>
+            <option>12 kg</option>
+            <option>16 kg</option>
+            <option>24 kg</option>
+            <option>32 kg</option>
+          </select>
+        </p>
+        {% csrf-field %}
+        <p>
+          Weight:
+          <select class="form-control" name="bodyweight" required>
+            <option>-58 kg</option>
+            <option>-63 kg</option>
+            <option>-68 kg</option>
+            <option>+68 kg</option>
+          </select>
+        </p>
+        <input type="submit" class="btn btn-primary" value="submit" />
+      </div>
+    </form>
+{% endblock %}
