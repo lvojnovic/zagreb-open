@@ -1,11 +1,12 @@
 {% extends "base.html" %}
 {% block content %}
+    {% script "/js/submitForm.js" %}
     <form method="POST" action="/register-submit">
       <div class="form-group">
         {% csrf-field %}
         <p>
           Select a competition:
-          <select class="form-control" name="competition" required>
+          <select class="form-control" name="competition" id="competition" required>
             <option>Bjelovar Open</option>
             <option>Prvenstvo Hrvatske</option>
           </select>
@@ -16,7 +17,7 @@
           <input class="form-control"
                  type="text"
                  name="name"
-                 value="{{name}}" 
+                 value="{{name}}"
                  required/>
             </p>
         {% if errors.name %}
@@ -37,7 +38,7 @@
         {% csrf-field %}
         <p>
           Sex:
-          <select class="form-control" name="sex" required>
+          <select class="form-control" name="sex" id="sex" required>
             <option>Male</option>
             <option>Female</option>
           </select>
@@ -48,7 +49,7 @@
           <input class="form-control"
                  type="text"
                  name="club"
-                 value="{{club}}" 
+                 value="{{club}}"
                  required />
             </p>
         {% if errors.club %}
@@ -60,7 +61,7 @@
           <input class="form-control"
                  type="text"
                  name="country"
-                 value="{{country}}" 
+                 value="{{country}}"
                  required/>
             </p>
         {% if errors.country %}
@@ -69,17 +70,15 @@
         {% csrf-field %}
         <p>
           Category:
-          <select class="form-control" name="category" required>
+          <select class="form-control" name="category" id="category" required>
             <option>Biathlon</option>
             <option>Long Cycle</option>
-            <option>Snatch</option>
           </select>
         </p>
         {% csrf-field %}
         <p>
           Kettlebell:
-          <select class="form-control" name="kettlebell" required>
-            <option>12 kg</option>
+          <select class="form-control" name="kettlebell" id="kettlebell" required>
             <option>16 kg</option>
             <option>24 kg</option>
             <option>32 kg</option>
@@ -88,11 +87,11 @@
         {% csrf-field %}
         <p>
           Weight:
-          <select class="form-control" name="bodyweight" required>
-            <option>-58 kg</option>
-            <option>-63 kg</option>
-            <option>-68 kg</option>
-            <option>+68 kg</option>
+          <select class="form-control" name="bodyweight" id="bodyweight" required>
+            <option>-78 kg</option>
+            <option>-85 kg</option>
+            <option>-95 kg</option>
+            <option>+95 kg</option>
           </select>
         </p>
         <input type="submit" class="btn btn-primary" value="submit" />

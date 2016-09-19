@@ -31,3 +31,14 @@ body {
   }
 }
 
+.competition {
+    color : red;
+}
+
+.sex {
+    color : grey;
+}
+
+.category {
+    text-align: center;
+}

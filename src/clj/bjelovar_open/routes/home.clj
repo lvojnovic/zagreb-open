@@ -13,22 +13,20 @@
   (layout/render "about.html"))
 
 (defn group-category [items]
-  (map 
-   (fn [[k v]] {:category k :items (sort-by :kettlebell (sort-by :bodyweight v))}) 
+  (map
+   (fn [[k v]] {:category k :items (sort-by :kettlebell (sort-by :bodyweight v))})
    (group-by :category items)))
 
 (defn group-sex [items]
-  (map 
-   (fn [[k v]] {:sex k :items (group-category v)}) 
+  (map
+   (fn [[k v]] {:sex k :items (group-category v)})
    (group-by :sex items)))
 
 (defn group-competitions []
-  (map 
-   (fn [[k v]] {:competition k :items (group-sex v)}) 
+  (map
+   (fn [[k v]] {:competition k :items (group-sex v)})
    (group-by :competition (db/get-participants)))
 )
-
-(group-competitions)
 
 (defn participants []
   (layout/render "participants.html" {:competitions (group-competitions)}))
@@ -47,4 +45,3 @@
   (GET "/register" [] (register))
   (GET "/about" [] (about-page))
   (POST "/register-submit" request (insert-participant! request)))
-

@@ -1,14 +1,31 @@
 {% extends "base.html" %}
 {% block content %}
   {% for comp in competitions %}
-    <h2>{{comp.competition}}</h2>
+    <h3 class="competition">{{comp.competition}}</h3>
     {% for s in comp.items %}
-       <h3>{{s.sex}}</h3>
+       <h4 class="sex">{{s.sex}}</h5>
        {% for cat in s.items %}
-         <h4>{{cat.category}}</h4>
+       <h5 class="category">{{cat.category}}</h5>
+       <p><table class="table table-hover">
+         <thead>
+           <th>First name</th>
+           <th>Last name</th>
+           <th>Club</th>
+           <th>Country</th>
+           <th>Kettlebell</th>
+           <th>Weight</th>
+         </thead>
          {% for p in cat.items %}
-           <p>{{p.name}} {{p.surname}} {{p.club}} {{p.country}} {{p.kettlebell}} {{p.bodyweight}}</p>
+         <tbody>
+           <td>{{p.name}}</td>
+           <td>{{p.surname}}</td>
+           <td>{{p.club}}</td>
+           <td>{{p.country}}</td>
+           <td>{{p.kettlebell}}</td>
+           <td>{{p.bodyweight}}</td>
+         </tbody>
          {% endfor %}
+       </table></p>
        {% endfor %}
     {% endfor %}
   {% endfor %}
