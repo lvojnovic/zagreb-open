@@ -41,6 +41,7 @@ body {
 
 .category {
     text-align: center;
+    font-weight: bold;
 }
 
 .natjecanje_logo {
@@ -65,4 +66,8 @@ body {
         float: left;
         margin-left: 0px;
     }
+}
+
+.table-header {
+    background:#E4FDFF;
 }

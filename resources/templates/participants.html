@@ -3,12 +3,12 @@
   {% for comp in competitions %}
     <h3 class="competition">{{comp.competition}}</h3>
     {% for s in comp.items %}
-       <h4 class="sex">{{s.sex}}</h4>
+       <h4 class="sex"><i class="fa fa-{% ifequal s.sex "Male" %}mars{% else %}venus{% endifequal %}" aria-hidden="true"></i> {{s.sex}}</h4>
        {% for cat in s.items %}
        <h5 class="category">{{cat.category}}</h5>
        <p><table class="table table-hover">
            <thead>
-             <tr>
+             <tr class="table-header">
                <th>First name</th>
                <th>Last name</th>
                <th>Club</th>
