@@ -3,28 +3,32 @@
   {% for comp in competitions %}
     <h3 class="competition">{{comp.competition}}</h3>
     {% for s in comp.items %}
-       <h4 class="sex">{{s.sex}}</h5>
+       <h4 class="sex">{{s.sex}}</h4>
        {% for cat in s.items %}
        <h5 class="category">{{cat.category}}</h5>
        <p><table class="table table-hover">
-         <thead>
-           <th>First name</th>
-           <th>Last name</th>
-           <th>Club</th>
-           <th>Country</th>
-           <th>Kettlebell</th>
-           <th>Weight</th>
-         </thead>
-         {% for p in cat.items %}
-         <tbody>
-           <td>{{p.name}}</td>
-           <td>{{p.surname}}</td>
-           <td>{{p.club}}</td>
-           <td>{{p.country}}</td>
-           <td>{{p.kettlebell}}</td>
-           <td>{{p.bodyweight}}</td>
-         </tbody>
-         {% endfor %}
+           <thead>
+             <tr>
+               <th>First name</th>
+               <th>Last name</th>
+               <th>Club</th>
+               <th>Country</th>
+               <th>Kettlebell</th>
+               <th>Weight</th>
+             </tr>
+           </thead>
+           {% for p in cat.items %}
+           <tbody>
+             <tr>
+               <td>{{p.name}}</td>
+               <td>{{p.surname}}</td>
+               <td>{{p.club}}</td>
+               <td>{{p.country}}</td>
+               <td>{{p.kettlebell}}</td>
+               <td>{{p.bodyweight}}</td>
+             </tr>
+           </tbody>
+           {% endfor %}
        </table></p>
        {% endfor %}
     {% endfor %}
