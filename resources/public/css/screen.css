@@ -49,3 +49,20 @@ body {
     margin-bottom: 10px;
     height : 15em;
 }
+
+.hgss_logo {
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    height : 15em;
+}
+
+@media(max-width: 520px) {
+    .natjecanje_logo {
+        margin-botton: 20px;
+    }
+    .hgss_logo {
+        float: left;
+        margin-left: 0px;
+    }
+}
