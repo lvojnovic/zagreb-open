@@ -14,7 +14,7 @@
 
 (defn group-category [items]
   (map
-   (fn [[k v]] {:category k :items (sort-by (juxt :kettlebell :bodyweight) v)})
+   (fn [[k v]] {:category k :items (sort-by (juxt :kettlebell #(.substring (:bodyweight %) 1)) v)})
    (group-by :category items)))
 
 (defn group-sex [items]
