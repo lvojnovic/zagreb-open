@@ -12,10 +12,20 @@
 (defn about-page []
   (layout/render "about.html"))
 
+(defn by-bodyweight [participant]
+  (.substring (:bodyweight participant) 1))
+
+(defn by-bodyweight-edge-case [participant]
+  (condp = (first (:bodyweight participant))
+    \- 1
+    \+ 2
+    :else (do (println participant) 3)))
+
 (defn group-category [items]
   (map
-   (fn [[k v]] {:category k :items (sort-by (juxt :kettlebell #(.substring (:bodyweight %) 1)) v)})
+   (fn [[k v]] {:category k :items (sort-by (juxt :kettlebell by-bodyweight by-bodyweight-edge-case) v)})
    (group-by :category items)))
+
 
 (defn group-sex [items]
   (map
