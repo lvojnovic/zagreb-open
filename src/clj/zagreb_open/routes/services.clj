@@ -1,4 +1,4 @@
-(ns bjelovar-open.routes.services
+(ns zagreb-open.routes.services
   (:require [ring.util.http-response :refer :all]
             [compojure.api.sweet :refer :all]
             [schema.core :as s]

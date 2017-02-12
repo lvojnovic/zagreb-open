@@ -5,14 +5,6 @@
       <div class="form-group">
         {% csrf-field %}
         <p>
-          Select a competition:
-          <select class="form-control" name="competition" id="competition" required>
-            <option>Bjelovar Open</option>
-            <option>Prvenstvo Hrvatske</option>
-          </select>
-        </p>
-        {% csrf-field %}
-        <p>
           Name:
           <input class="form-control"
                  type="text"
@@ -57,6 +49,18 @@
         {% endif %}
         {% csrf-field %}
         <p>
+          Coach:
+          <input class="form-control"
+                 type="text"
+                 name="coach"
+                 value="{{coach}}"
+                 required />
+            </p>
+        {% if errors.coach %}
+        <div class="alert alert-danger">{{errors.coach|join}}</div>
+        {% endif %}
+        {% csrf-field %}
+        <p>
           Country:
           <input class="form-control"
                  type="text"
@@ -94,7 +98,7 @@
             <option>+95 kg</option>
           </select>
         </p>
-        <input type="submit" class="btn btn-primary" value="Registration is closed" disabled/>
+        <input type="submit" class="btn btn-primary" value="submit" />
       </div>
     </form>
 {% endblock %}

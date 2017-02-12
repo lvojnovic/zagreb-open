@@ -1,17 +1,17 @@
-(ns bjelovar-open.test.db.core
-  (:require [bjelovar-open.db.core :refer [*db*] :as db]
+(ns zagreb-open.test.db.core
+  (:require [zagreb-open.db.core :refer [*db*] :as db]
             [luminus-migrations.core :as migrations]
             [clojure.test :refer :all]
             [clojure.java.jdbc :as jdbc]
-            [bjelovar-open.config :refer [env]]
+            [zagreb-open.config :refer [env]]
             [mount.core :as mount]))
 
 (use-fixtures
   :once
   (fn [f]
     (mount/start
-      #'bjelovar-open.config/env
-      #'bjelovar-open.db.core/*db*)
+      #'zagreb-open.config/env
+      #'zagreb-open.db.core/*db*)
     (migrations/migrate ["migrate"] (select-keys env [:database-url]))
     (f)))
 

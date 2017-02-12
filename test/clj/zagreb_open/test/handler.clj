@@ -1,7 +1,7 @@
-(ns bjelovar-open.test.handler
+(ns zagreb-open.test.handler
   (:require [clojure.test :refer :all]
             [ring.mock.request :refer :all]
-            [bjelovar-open.handler :refer :all]))
+            [zagreb-open.handler :refer :all]))
 
 (deftest test-app
   (testing "main route"

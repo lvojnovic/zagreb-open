@@ -1,6 +1,6 @@
-(ns bjelovar-open.routes.home
-  (:require [bjelovar-open.layout :as layout]
-            [bjelovar-open.db.core :as db]
+3(ns zagreb-open.routes.home
+  (:require [zagreb-open.layout :as layout]
+            [zagreb-open.db.core :as db]
             [compojure.core :refer [defroutes GET POST]]
             [ring.util.http-response :as response]
             [clojure.java.io :as io]))
@@ -39,7 +39,7 @@
 )
 
 (defn participants []
-  (layout/render "participants.html" {:competitions (group-competitions)}))
+  (layout/render "participants.html" {:items (group-sex (db/get-participants))}))
 
 (defn register []
   (layout/render "register.html"))

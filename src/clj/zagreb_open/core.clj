@@ -1,9 +1,9 @@
-(ns bjelovar-open.core
-  (:require [bjelovar-open.handler :as handler]
+(ns zagreb-open.core
+  (:require [zagreb-open.handler :as handler]
             [luminus.repl-server :as repl]
             [luminus.http-server :as http]
             [luminus-migrations.core :as migrations]
-            [bjelovar-open.config :refer [env]]
+            [zagreb-open.config :refer [env]]
             [clojure.tools.cli :refer [parse-opts]]
             [clojure.tools.logging :as log]
             [mount.core :as mount])
@@ -50,7 +50,7 @@
   (cond
     (some #{"migrate" "rollback"} args)
     (do
-      (mount/start #'bjelovar-open.config/env)
+      (mount/start #'zagreb-open.config/env)
       (migrations/migrate args (select-keys env [:database-url]))
       (System/exit 0))
     :else

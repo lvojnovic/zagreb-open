@@ -1,12 +1,12 @@
-(ns bjelovar-open.handler
+(ns zagreb-open.handler
   (:require [compojure.core :refer [routes wrap-routes]]
-            [bjelovar-open.layout :refer [error-page]]
-            [bjelovar-open.routes.home :refer [home-routes]]
-            [bjelovar-open.routes.services :refer [service-routes]]
+            [zagreb-open.layout :refer [error-page]]
+            [zagreb-open.routes.home :refer [home-routes]]
+            [zagreb-open.routes.services :refer [service-routes]]
             [compojure.route :as route]
-            [bjelovar-open.env :refer [defaults]]
+            [zagreb-open.env :refer [defaults]]
             [mount.core :as mount]
-            [bjelovar-open.middleware :as middleware]))
+            [zagreb-open.middleware :as middleware]))
 
 (mount/defstate init-app
                 :start ((or (:init defaults) identity))

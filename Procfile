@@ -1,1 +1,1 @@
-web: java $JVM_OPTS -cp target/uberjar/bjelovar-open.jar clojure.main -m bjelovar-open.core
+web: java $JVM_OPTS -cp target/uberjar/zagreb-open.jar clojure.main -m zagreb-open.core

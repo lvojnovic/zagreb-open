@@ -1,11 +1,11 @@
-(ns bjelovar-open.middleware
-  (:require [bjelovar-open.env :refer [defaults]]
+(ns zagreb-open.middleware
+  (:require [zagreb-open.env :refer [defaults]]
             [clojure.tools.logging :as log]
-            [bjelovar-open.layout :refer [*app-context* error-page]]
+            [zagreb-open.layout :refer [*app-context* error-page]]
             [ring.middleware.anti-forgery :refer [wrap-anti-forgery]]
             [ring.middleware.webjars :refer [wrap-webjars]]
             [ring.middleware.format :refer [wrap-restful-format]]
-            [bjelovar-open.config :refer [env]]
+            [zagreb-open.config :refer [env]]
             [ring.middleware.flash :refer [wrap-flash]]
             [immutant.web.middleware :refer [wrap-session]]
             [ring.middleware.defaults :refer [site-defaults wrap-defaults]]
@@ -13,7 +13,7 @@
             [buddy.auth.accessrules :refer [restrict]]
             [buddy.auth :refer [authenticated?]]
             [buddy.auth.backends.session :refer [session-backend]]
-            [bjelovar-open.layout :refer [*identity*]])
+            [zagreb-open.layout :refer [*identity*]])
   (:import [javax.servlet ServletContext]))
 
 (defn wrap-context [handler]

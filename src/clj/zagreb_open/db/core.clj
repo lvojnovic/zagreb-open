@@ -1,9 +1,9 @@
-(ns bjelovar-open.db.core
+(ns zagreb-open.db.core
   (:require
     [cheshire.core :refer [generate-string parse-string]]
     [clojure.java.jdbc :as jdbc]
     [conman.core :as conman]
-    [bjelovar-open.config :refer [env]]
+    [zagreb-open.config :refer [env]]
     [mount.core :refer [defstate]])
   (:import org.postgresql.util.PGobject
            java.sql.Array

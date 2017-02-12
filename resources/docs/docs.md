@@ -7,7 +7,7 @@ If you haven't already, then please follow the steps below to configure your dat
 * Create the database for your application.
 * Update the connection URL in the `profiles.clj` file with your database name and login.
 * Run `lein run migrate` in the root of the project to create the tables.
-* Let `mount` know to start the database connection by `require`-ing bjelovar-open.db.core in some other namespace.
+* Let `mount` know to start the database connection by `require`-ing zagreb-open.db.core in some other namespace.
 * Restart the application.
 
 </div>
@@ -15,12 +15,12 @@ If you haven't already, then please follow the steps below to configure your dat
 
 ### Managing Your Middleware
 
-Request middleware functions are located under the `bjelovar-open.middleware` namespace.
+Request middleware functions are located under the `zagreb-open.middleware` namespace.
 
 This namespace is reserved for any custom middleware for the application. Some default middleware is
 already defined here. The middleware is assembled in the `wrap-base` function.
 
-Middleware used for development is placed in the `bjelovar-open.dev-middleware` namespace found in
+Middleware used for development is placed in the `zagreb-open.dev-middleware` namespace found in
 the `env/dev/clj/` source path.
 
 ### Here are some links to get started

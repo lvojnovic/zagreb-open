@@ -36,7 +36,7 @@ body {
 }
 
 .sex {
-    color : grey;
+    color : #929292;
 }
 
 .category {
@@ -69,5 +69,6 @@ body {
 }
 
 .table-header {
-    background:#E4FDFF;
+    background:#F5F5F5;
+    color:#3c90ef;
 }
