@@ -13,6 +13,11 @@ $( document ).ready(function() {
       }
     }
 
+    var femaleKettlebell = {
+      "Snatch" : ["12 kg", "16 kg", "20 kg"],
+      "Long Cycle" : ["2x12 kg", "2x16 kg", "2x20 kg"],
+    }
+
     var sex = $("#sex");
     var category = $("#category");
     var kettlebell = $("#kettlebell");
@@ -34,5 +39,16 @@ $( document ).ready(function() {
         repopulateOptions(bodyweight, "bodyweight");
     }
 
+    var onCategoryChange = function() {
+        var isFemale = sex.val() === 'Female';
+        if (!isFemale) return;
+
+        kettlebell[0].options.length = 0; //reset
+        femaleKettlebell[category.val()].forEach(function(c) {
+            kettlebell[0].appendChild(new Option(c, c));
+        });
+    };
+
     sex.on('change', onChange);
+    category.on('change', onCategoryChange);
 });
