@@ -1,7 +1,7 @@
 $( document ).ready(function() {
     var rules = {
       "Male" : {
-        category : ["Biathlon", "Long Cycle"],
+        category : ["Biathlon", "Long Cycle", "Snatch"],
         kettlebell : ["16 kg", "24 kg", "28 kg", "32 kg"],
         bodyweight : ["-63 kg", "-68 kg", "-73 kg", "-78 kg", 
                       "-85 kg", "-95 kg", "+95 kg"]
