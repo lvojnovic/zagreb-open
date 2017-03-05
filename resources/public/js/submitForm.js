@@ -16,6 +16,7 @@ $( document ).ready(function() {
     var femaleKettlebell = {
       "Snatch" : ["12 kg", "16 kg", "20 kg"],
       "Long Cycle" : ["2x12 kg", "2x16 kg", "2x20 kg"],
+      "Biathlon" : ["2x12 kg", "2x16 kg", "2x20 kg"],
     }
 
     var sex = $("#sex");
