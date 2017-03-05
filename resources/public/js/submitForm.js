@@ -7,7 +7,7 @@ $( document ).ready(function() {
                       "-85 kg", "-95 kg", "-105 kg", "+105 kg"]
       },
       "Female" : {
-        category : ["Snatch", "Long Cycle"],
+        category : ["Snatch", "Long Cycle", "Biathlon"],
         kettlebell : ["12 kg", "16 kg", "20 kg"],
         bodyweight : ["-58 kg", "-63 kg", "-68 kg", "-73 kg", "+73 kg"]
       }
