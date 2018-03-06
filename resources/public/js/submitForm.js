@@ -43,10 +43,10 @@ $( document ).ready(function() {
 
     var onCategoryChange = function() {
         var sexValue = sex.val();
-        var category = category.val();
+        var categoryVal = category.val();
 
         kettlebell[0].options.length = 0; //reset
-        var newVals = rules[sexValue]['kettlebell'][category]
+        var newVals = rules[sexValue]['kettlebell'][categoryVal]
         newVals.forEach(function(c) {
             kettlebell[0].appendChild(new Option(c, c));
         });
