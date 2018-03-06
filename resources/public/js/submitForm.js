@@ -26,6 +26,17 @@ $( document ).ready(function() {
     var kettlebell = $("#kettlebell");
     var bodyweight = $("#bodyweight");
 
+    var onCategoryChange = function() {
+        var sexValue = sex.val();
+        var categoryVal = category.val();
+
+        kettlebell[0].options.length = 0; //reset
+        var newVals = rules[sexValue]['kettlebell'][categoryVal]
+        newVals.forEach(function(c) {
+            kettlebell[0].appendChild(new Option(c, c));
+        });
+    };
+
     var onChange = function() {
         var sexValue = sex.val()
 
@@ -39,18 +50,8 @@ $( document ).ready(function() {
 
         repopulateOptions(category, "category");
         repopulateOptions(bodyweight, "bodyweight");
+        onCategoryChange();
     }
-
-    var onCategoryChange = function() {
-        var sexValue = sex.val();
-        var categoryVal = category.val();
-
-        kettlebell[0].options.length = 0; //reset
-        var newVals = rules[sexValue]['kettlebell'][categoryVal]
-        newVals.forEach(function(c) {
-            kettlebell[0].appendChild(new Option(c, c));
-        });
-    };
 
     sex.on('change', onChange);
     category.on('change', onCategoryChange);
