@@ -1,21 +1,23 @@
 $( document ).ready(function() {
     var rules = {
       "Male" : {
-        category : ["Jerk", "Long Cycle", "Snatch"],
+        category : ["Jerk", "Long Cycle", "Snatch", "Jerk Duel"],
         kettlebell : {
             "Snatch" : ["20 kg", "24 kg", "28 kg", "32 kg"],
             "Long Cycle" : ["2x20 kg", "2x24 kg", "2x28 kg", "2x32 kg"],
-            "Jerk" : ["2x20 kg", "2x24 kg", "2x28 kg", "2x32 kg"]
+            "Jerk" : ["2x20 kg", "2x24 kg", "2x28 kg", "2x32 kg"],
+            "Jerk Duel" : ["2x24 kg"]
         },
         bodyweight : ["-63 kg", "-68 kg", "-73 kg", "-78 kg",
                       "-85 kg", "-95 kg", "+95 kg"]
       },
       "Female" : {
-        category : ["Snatch", "Long Cycle", "Jerk"],
+        category : ["Snatch", "Long Cycle", "Jerk", "Jerk Duel"],
         kettlebell : {
             "Snatch" : ["12 kg", "16 kg", "20 kg", "24 kg"],
             "Long Cycle" : ["2x12 kg", "2x16 kg", "2x20 kg"],
             "Jerk" : ["2x12 kg", "2x16 kg", "2x20 kg"],
+            "Jerk Duel" : ["2x16 kg"]
         },
         bodyweight : ["-58 kg", "-63 kg", "-68 kg", "+68 kg"]
       }
