@@ -1,11 +1,10 @@
 $( document ).ready(function() {
     var rules = {
       "Male" : {
-        category : ["Jerk", "Long Cycle", "Snatch", "Jerk Duel"],
+        category : ["Long Cycle", "Biathlon", "Jerk Duel"],
         kettlebell : {
-            "Snatch" : ["20 kg", "24 kg", "28 kg", "32 kg"],
             "Long Cycle" : ["2x20 kg", "2x24 kg", "2x28 kg", "2x32 kg"],
-            "Jerk" : ["2x20 kg", "2x24 kg", "2x28 kg", "2x32 kg"],
+            "Biathlon" : ["2x20 kg", "2x24 kg", "2x28 kg", "2x32 kg"],
             "Jerk Duel" : ["2x24 kg"]
         },
         bodyweight : ["-63 kg", "-68 kg", "-73 kg", "-78 kg",
