@@ -24,8 +24,8 @@ WHERE id = :id
 -- :name insert-participant! :! :n
 -- :doc inserts a new participant
 INSERT INTO participants
-(name, surname, sex, club, coach, country, category, kettlebell, bodyweight)
-VALUES (:name, :surname, :sex, :club, :coach, :country, :category, :kettlebell, :bodyweight)
+(competition, name, surname, sex, club, coach, country, category, kettlebell, bodyweight)
+VALUES (:competition, :name, :surname, :sex, :club, :coach, :country, :category, :kettlebell, :bodyweight)
 
 -- :name get-participants :? :*
 -- :doc retrieves all participants

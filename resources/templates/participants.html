@@ -1,35 +1,38 @@
 {% extends "base.html" %}
 {% block content %}
-  {% for s in items %}
-     <h4 class="sex"><i class="fa fa-{% ifequal s.sex "Male" %}mars{% else %}venus{% endifequal %}" aria-hidden="true"></i> {{s.sex}}</h4>
-     {% for cat in s.items %}
-     <h5 class="category">{{cat.category}}</h5>
-     <p><table class="table table-hover">
-         <thead>
-           <tr class="table-header">
-             <th>First name</th>
-             <th>Last name</th>
-             <th>Club</th>
-             <th>Coach</th>
-             <th>Country</th>
-             <th>Kettlebell</th>
-             <th>Weight</th>
-           </tr>
-         </thead>
-         {% for p in cat.items %}
-         <tbody>
-           <tr>
-             <td>{{p.name}}</td>
-             <td>{{p.surname}}</td>
-             <td>{{p.club}}</td>
-             <td>{{p.coach}}</td>
-             <td>{{p.country}}</td>
-             <td>{{p.kettlebell}}</td>
-             <td>{{p.bodyweight}}</td>
-           </tr>
-         </tbody>
-         {% endfor %}
-     </table></p>
-     {% endfor %}
+  {% for comp in competitions %}
+    <h3 class="competition">{{comp.competition}}</h3>
+    {% for s in comp.items %}
+       <h4 class="sex"><i class="fa fa-{% ifequal s.sex "Male" %}mars{% else %}venus{% endifequal %}" aria-hidden="true"></i> {{s.sex}}</h4>
+       {% for cat in s.items %}
+       <h5 class="category">{{cat.category}}</h5>
+       <p><table class="table table-hover">
+           <thead>
+             <tr class="table-header">
+               <th>First name</th>
+               <th>Last name</th>
+               <th>Club</th>
+               <th>Coach</th>
+               <th>Country</th>
+               <th>Kettlebell</th>
+               <th>Weight</th>
+             </tr>
+           </thead>
+           {% for p in cat.items %}
+           <tbody>
+             <tr>
+               <td>{{p.name}}</td>
+               <td>{{p.surname}}</td>
+               <td>{{p.club}}</td>
+               <td>{{p.coach}}</td>
+               <td>{{p.country}}</td>
+               <td>{{p.kettlebell}}</td>
+               <td>{{p.bodyweight}}</td>
+             </tr>
+           </tbody>
+           {% endfor %}
+       </table></p>
+       {% endfor %}
+    {% endfor %}
   {% endfor %}
 {% endblock %}

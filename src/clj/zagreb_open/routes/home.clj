@@ -1,4 +1,4 @@
-3(ns zagreb-open.routes.home
+(ns zagreb-open.routes.home
   (:require [zagreb-open.layout :as layout]
             [zagreb-open.db.core :as db]
             [compojure.core :refer [defroutes GET POST]]
@@ -39,7 +39,7 @@
 )
 
 (defn participants []
-  (layout/render "participants.html" {:items (group-sex (db/get-participants))}))
+  (layout/render "participants.html" {:competitions (group-competitions)}))
 
 (defn register []
   (layout/render "register.html"))
