@@ -1,42 +1,41 @@
 $( document ).ready(function() {
     var rules = {
-      "5th Zagreb Open" : {
+      "6th Zagreb Open" : {
         "Male" : {
           category : ["Long Cycle", "Biathlon", "Jerk Duel"],
           kettlebell : {
-            "Long Cycle" : ["2x20 kg", "2x24 kg", "2x28 kg", "2x32 kg"],
-            "Biathlon" : ["2x20 kg", "2x24 kg", "2x28 kg", "2x32 kg"],
-            "Jerk Duel" : ["2x24 kg"]
+            "Long Cycle" : ["2x16 kg", "2x24 kg", "2x32 kg"],
+            "Biathlon" : ["2x16 kg", "2x24 kg", "2x32 kg"]
           },
           bodyweight : ["-63 kg", "-68 kg", "-73 kg", "-78 kg",
                         "-85 kg", "-95 kg", "+95 kg"]
         },
         "Female" : {
-          category : ["Snatch", "Long Cycle", "Jerk", "Jerk Duel"],
+          category : ["Snatch", "Long Cycle", "Biathlon"],
           kettlebell : {
             "Snatch" : ["12 kg", "16 kg", "20 kg", "24 kg"],
-            "Long Cycle" : ["2x12 kg", "2x16 kg", "2x20 kg"],
-            "Jerk" : ["2x12 kg", "2x16 kg", "2x20 kg"],
-            "Jerk Duel" : ["2x16 kg"]
+            "Long Cycle" : ["2x12 kg", "2x16 kg", "2x20 kg", "2x24 kg"],
+            "Biathlon" : ["2x12 kg", "2x16 kg", "2x20 kg"]
           },
           bodyweight : ["-58 kg", "-63 kg", "-68 kg", "+68 kg"]
         }
       },
-      "Cup of Croatia" : {
+      "Croatian Championship" : {
         "Male" : {
-          category : ["Long Cycle", "Biathlon"],
+          category : ["Long Cycle", "Biathlon", "Jerk Duel"],
           kettlebell : {
-            "Long Cycle" : ["2x24 kg", "2x32 kg"],
-            "Biathlon" : ["2x24 kg", "2x32 kg"]
+            "Long Cycle" : ["2x16 kg", "2x24 kg", "2x32 kg"],
+            "Biathlon" : ["2x16 kg", "2x24 kg", "2x32 kg"]
           },
           bodyweight : ["-63 kg", "-68 kg", "-73 kg", "-78 kg",
                         "-85 kg", "-95 kg", "+95 kg"]
         },
         "Female" : {
-          category : ["Snatch", "Long Cycle"],
+          category : ["Snatch", "Long Cycle", "Biathlon"],
           kettlebell : {
-            "Snatch" : ["16 kg", "24 kg"],
-            "Long Cycle" : ["2x16 kg", "2x24 kg"],
+            "Snatch" : ["12 kg", "16 kg", "20 kg", "24 kg"],
+            "Long Cycle" : ["2x12 kg", "2x16 kg", "2x20 kg", "2x24 kg"],
+            "Biathlon" : ["2x12 kg", "2x16 kg", "2x20 kg"]
           },
           bodyweight : ["-58 kg", "-63 kg", "-68 kg", "+68 kg"]
         }
