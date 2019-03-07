@@ -38,7 +38,7 @@
         {% csrf-field %}
         <p>
           Sex:
-          <select class="form-control" name="sex" id="sex" required>
+          <select class="form-control" name="sex" id="sex" autocomplete="off" required>
             <option>Male</option>
             <option>Female</option>
           </select>
@@ -85,6 +85,9 @@
           <select class="form-control" name="category" id="category" required>
             <option>Long Cycle</option>
             <option>Biathlon</option>
+            <option>Half Marathon Long Cycle</option>
+            <option>Half Marathon Jerk</option>
+            <option>Half Marathon Snatch</option>
           </select>
         </p>
         {% csrf-field %}
