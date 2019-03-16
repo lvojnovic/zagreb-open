@@ -23,11 +23,11 @@ $( document ).ready(function() {
         kettlebell : {
           "Snatch" : ["12 kg", "16 kg", "20 kg", "24 kg"],
           "Long Cycle" : ["2x12 kg", "2x16 kg", "2x20 kg", "2x24 kg"],
-          "Biathlon" : ["2x12 kg", "2x16 kg", "2x20 kg", "2x24kg"],
+          "Biathlon" : ["2x12 kg", "2x16 kg", "2x20 kg"],
           "Half Marathon Long Cycle" : ["2x12 kg", "2x16kg", 
                                         "one arm 16 kg", "one arm 20 kg"],
           "Half Marathon Jerk" : ["2x12 kg", "one arm 16 kg"],
-          "Half Marathon Snatch" : ["24 kg"], 
+          "Half Marathon Snatch" : ["12 kg", "16 kg", "20 kg"],
         },
         bodyweight : ["-58 kg", "-63 kg", "-68 kg", "+68 kg"]
       }
