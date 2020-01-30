@@ -7,11 +7,9 @@ $( document ).ready(function() {
         kettlebell : {
           "Long Cycle" : ["2x16 kg", "2x24 kg", "2x32 kg"],
           "Biathlon" : ["2x16 kg", "2x24 kg", "2x32 kg"],
-          "Half Marathon Long Cycle" : ["2x16 kg", "2x20kg", 
-                                        "one arm 24 kg", "one arm 32 kg"],
-          "Half Marathon Jerk" : ["2x16 kg", "2x20kg", 
-                                  "one arm 24 kg", "one arm 32 kg"],
-          "Half Marathon Snatch" : ["24 kg"]
+          "Half Marathon Long Cycle" : ["one arm 24 kg", "one arm 32 kg"],
+          "Half Marathon Jerk" : ["one arm 24 kg", "one arm 32 kg"],
+          "Half Marathon Snatch" : ["16 kg", "24 kg"]
         },
         bodyweight : ["-63 kg", "-68 kg", "-73 kg", "-78 kg",
                       "-85 kg", "-95 kg", "+95 kg"]
@@ -24,9 +22,8 @@ $( document ).ready(function() {
           "Snatch" : ["12 kg", "16 kg", "20 kg", "24 kg"],
           "Long Cycle" : ["2x12 kg", "2x16 kg", "2x20 kg", "2x24 kg"],
           "Biathlon" : ["2x12 kg", "2x16 kg", "2x20 kg"],
-          "Half Marathon Long Cycle" : ["2x12 kg", "2x16kg", 
-                                        "one arm 16 kg", "one arm 20 kg"],
-          "Half Marathon Jerk" : ["2x12 kg", "one arm 16 kg"],
+          "Half Marathon Long Cycle" : ["one arm 16 kg", "one arm 20 kg"],
+          "Half Marathon Jerk" : ["one arm 12 kg", "one arm 16 kg"],
           "Half Marathon Snatch" : ["12 kg", "16 kg", "20 kg"],
         },
         bodyweight : ["-58 kg", "-63 kg", "-68 kg", "+68 kg"]
